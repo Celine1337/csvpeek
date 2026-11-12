@@ -1,0 +1,13 @@
+id,name,city,score,active,joined
+1,Alice,Berlin,9.5,true,2024-01-15
+2,Bob,Paris,7.25,false,2024-02-20
+3,Carol,Berlin,8.0,true,2024-03-05
+4,Dave,Rome,6.75,true,2024-04-11
+5,Eve,Berlin,,false,2024-05-02
+6,Frank,Paris,9.0,true,2024-06-18
+7,Gina,Rome,7.5,false,2024-07-23
+8,Heidi,Berlin,8.25,true,2024-08-30
+9,Ivan,Paris,5.5,true,2024-09-14
+10,Judy,Rome,8.75,false,2024-10-01
+11,Karl,Berlin,7.0,true,2024-11-19
+12,Lena,Paris,,false,2024-12-06

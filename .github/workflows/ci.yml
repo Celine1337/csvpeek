@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.9", "3.12"]
+        exclude:
+          # ubuntu-latest (26.04) has no setup-python builds for 3.9
+          - os: ubuntu-latest
+            python: "3.9"
+        include:
+          - os: ubuntu-24.04
+            python: "3.9"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: CLI smoke test
+        shell: bash
+        run: |
+          python csvpeek.py --version
+          python csvpeek.py peek tests/demo/people.csv --no-color
+          python csvpeek.py peek tests/demo/people.csv --json --no-color > /dev/null
+          python csvpeek.py tojson tests/demo/tiny.csv > "$RUNNER_TEMP/tiny.json"
+          python csvpeek.py tocsv "$RUNNER_TEMP/tiny.json" > /dev/null
+          if python csvpeek.py peek missing.csv --no-color; then exit 1; fi

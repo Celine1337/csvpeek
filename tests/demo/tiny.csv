@@ -1,0 +1,4 @@
+id,city,score,active
+1,Berlin,9.5,true
+2,Paris,,false
+3,Rome,7.25,yes

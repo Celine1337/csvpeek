@@ -1,0 +1,46 @@
+{
+  "name": "csvpeek",
+  "kicker": "csv profiling cli",
+  "subtitle": "Quick CSV profiling & conversion.",
+  "avatar": "graph",
+  "hero_pills": [
+    ["pin", "Python 3.9+ · stdlib only"],
+    ["code", "Core: CSV / JSON"]
+  ],
+  "pills": [
+    {"id": "ru", "icon": "book", "label": "README RU"},
+    {"id": "en", "icon": "book", "label": "README EN"},
+    {"id": "release", "icon": "tag", "label": "Releases"},
+    {"id": "ci", "icon": "check", "label": "CI"},
+    {"id": "license", "icon": "doc", "label": "MIT"}
+  ],
+  "sections": {
+    "en": [
+      ["about", "About", "doc"],
+      ["features", "Features", "star"],
+      ["checks", "Modes", "gear"],
+      ["stack", "Tech stack", "code"],
+      ["quick", "Quick start", "play"],
+      ["shots", "Screenshots", "image"],
+      ["tests", "Tests", "check"]
+    ],
+    "ru": [
+      ["about", "О проекте", "doc"],
+      ["features", "Возможности", "star"],
+      ["checks", "Режимы", "gear"],
+      ["stack", "Технологии", "code"],
+      ["quick", "Быстрый старт", "play"],
+      ["shots", "Скриншоты", "image"],
+      ["tests", "Тесты", "check"]
+    ]
+  },
+  "chips": {
+    "MAIN": ["Python 3.9+", "unittest", "csv / json"],
+    "TOOLS": ["GitHub Actions", "Pillow (docs)", "argparse"]
+  },
+  "stats": [
+    ["55", "tests"],
+    ["3", "OSes in CI"],
+    ["v1.0.0", "latest release"]
+  ]
+}
